@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae35037ccdd9c34787ea508e88881a1, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier:
+  icon: {fileID: 2800000, guid: d0d1cda04ee3f144abf998efbfdfb8dc, type: 3}
+  title: Flexalon Layouts
+  sections:
+  - heading: Thank you for supporting Flexalon!
+    text:
+    linkText:
+    url:
+  - heading:
+    text: Samples for all layouts are provided in the Samples/Scenes directory.
+    linkText:
+    url:
+  - heading:
+    text: For an fun way to get started, try the Playground and Challenges (see links below).
+    linkText:
+    url:
+  - heading:
+    text: The latest documentation, tutorials, and examples are available on the website.
+    linkText:
+    url:
+  - heading: Links
+    text:
+    linkText: Website
+    url: https://www.flexalon.com
+  - heading:
+    text:
+    linkText: Documentation
+    url: https://www.flexalon.com/docs
+  - heading:
+    text:
+    linkText: Playground
+    url: https://www.flexalon.com/playground
+  - heading:
+    text:
+    linkText: Challenges
+    url: https://www.flexalon.com/docs/challenges
+  - heading: Support
+    text:
+    linkText:
+    url:
+  - heading:
+    text:
+    linkText: Forum
+    url: https://forum.unity.com/threads/1307199
+  - heading:
+    text:
+    linkText: support@virtualmaker.net
+    url: mailto:support@virtualmaker.net

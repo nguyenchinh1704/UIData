@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
+  - Stone
+  - Soil
+  - Cultivation Min
   layers:
   - Default
   - TransparentFX

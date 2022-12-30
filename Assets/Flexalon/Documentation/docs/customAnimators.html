@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../\/static\/favicon.svg" />
+		<link rel="icon" href="../\/static\/favicon.png" />
+		<!-- <meta name="viewport" content="width=device-width" /> -->
+		<meta http-equiv="content-security-policy" content=""><title>Flexalon Docs: Custom Animators</title>
+	<link href="../_app/immutable/assets/__layout-76928bbf.css" rel="stylesheet">
+	<link href="../_app/immutable/assets/docsPage-367d98a5.css" rel="stylesheet">
+	<link rel="modulepreload" href="/_app/immutable/start-43f35d63.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-9a223789.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-44a9624e.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/docs/customAnimators.svelte-206e4861.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/docsPage-127bdabf.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/page-76fa0ce5.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<div class="inline-flex items-center bg-black flex-col w-full min-h-screen"><div class="flex w-full justify-center items-start fixed bg-black z-10 p-4 pr-10 pl-8 shadow-lg shadow-[#21a6f088]"><div class="flex w-full max-w-[1600px] justify-between items-center"><a href="/"><img src="../\/static\/flexalon-logo.png" width="200px" alt="Logo"></a>
+            <div class="inline-flex gap-10 items-center"><a class="text-white text-lg font-bold" href="https://www.flexalon.com">Website</a></div></div></div>
+
+    <div class="mt-32 w-full h-4/5 flex flex-col items-center"><div class="pl-10"><div class="flex w-full max-w-[1600px] min-h-full text-zinc-400 relative"><div class="flex flex-col w-[300px] pt-10 gap-2 border-[#21a6f0] border-r-2 min-h-full fixed"><b class="text-zinc-200">Getting Started</b>
+                <a href="../docs.html" class="svelte-thsdwb">Installation</a>
+                <a href="../docs/coreConcepts.html" class="svelte-thsdwb">Core Concepts</a>
+                <a href="../docs/challenges.html" class="svelte-thsdwb">Challenges!</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/flexalonObject.html">Flexalon Objects</a>
+                <a href="../docs/flexalonObject.html#size" class="svelte-thsdwb">Width, Height, and Depth</a>
+                <a href="../docs/flexalonObject.html#offset" class="svelte-thsdwb">Offset, Scale, and Rotation</a>
+                <a href="../docs/flexalonObject.html#margins" class="svelte-thsdwb">Margins and Padding</a>
+
+                <b class="text-zinc-200 mt-5">Layouts</b>
+                <a href="../docs/flexibleLayout.html" class="svelte-thsdwb">Flexible Layout</a>
+                <a href="../docs/gridLayout.html" class="svelte-thsdwb">Grid Layout</a>
+                <a href="../docs/circleLayout.html" class="svelte-thsdwb">Circle / Spiral Layout</a>
+                <a href="../docs/curveLayout.html" class="svelte-thsdwb">Curve Layout</a>
+                <a href="../docs/randomLayout.html" class="svelte-thsdwb">Random Layout</a>
+                <a href="../docs/constraints.html" class="svelte-thsdwb">Constraints</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/animators.html">Animators</a>
+                <a href="../docs/animators.html#curve" class="svelte-thsdwb">Curve Animator</a>
+                <a href="../docs/animators.html#lerp" class="svelte-thsdwb">Lerp Animator</a>
+                <a href="../docs/animators.html#rb" class="svelte-thsdwb">Rigid Body Animator</a>
+                <a href="../docs/animators.html#layouts" class="svelte-thsdwb">Animating Layouts</a>
+
+                <b class="text-zinc-200 mt-5">Data Binding</b>
+                <a href="../docs/cloner.html" class="svelte-thsdwb">Cloner</a>
+                <a href="../docs/cloner.html#databinding" class="svelte-thsdwb">Data Binding</a>
+
+                <b class="text-zinc-200 mt-5">API</b>
+                <a href="../docs/pipeline.html" class="svelte-thsdwb">Flexalon Pipeline</a>
+                <a href="../docs/customLayout.html" class="svelte-thsdwb">Custom Layouts</a>
+                <a href="../docs/customAnimators.html" class="svelte-thsdwb">Custom Animators</a>
+                <a href="../docs/adapters.html" class="svelte-thsdwb">Adapters</a></div>
+            <div class="flex flex-col w-full p-10 ml-[300px]"><div class="text-white text-2xl mb-10">Custom Animators</div>
+                <div class="doc svelte-thsdwb"><p>You can create your own animator by implementing TransformUpdater.
+        To set your class as the updater for a node, call:
+    </p>
+
+    <p style="font-family:'Courier New', Courier, monospace">Flexalon.GetOrCreateNode(gameObject).SetTransformUpdater(yourObject);
+    </p>
+
+    <p class="text-xl mt-10">UpdatePosition</p>
+    <p style="font-family:'Courier New', Courier, monospace">bool <b>UpdatePosition</b>(FlexalonNode node, Vector3 position)
+    </p>
+    <table><tr><td>node</td>
+            <td>The node to be updated.</td></tr>
+        <tr><td>position</td>
+            <td>The position to move this node in local space.</td></tr>
+        <tr><td>Return Value</td>
+            <td>This method will be called every frame until it returns false. Then, it will be called again if the layout position changes.</td></tr></table>
+
+    <p class="text-xl mt-10">UpdateRotation</p>
+    <p style="font-family:'Courier New', Courier, monospace">bool <b>UpdateRotation</b>(FlexalonNode node, Quaternion rotation)
+    </p>
+    <table><tr><td>node</td>
+            <td>The node to be updated.</td></tr>
+        <tr><td>rotation</td>
+            <td>The rotation to move this node in local space.</td></tr>
+        <tr><td>Return Value</td>
+            <td>This method will be called every frame until it returns false. Then, it will be called again if the layout rotation changes.</td></tr></table>
+
+    <p class="text-xl mt-10">UpdateScale</p>
+    <p style="font-family:'Courier New', Courier, monospace">bool <b>UpdateScale</b>(FlexalonNode node, Vector3 scale)
+    </p>
+    <table><tr><td>node</td>
+            <td>The node to be updated.</td></tr>
+        <tr><td>scale</td>
+            <td>The scale to move this node in local space.</td></tr>
+        <tr><td>Return Value</td>
+            <td>This method will be called every frame until it returns false. Then, it will be called again if the layout scale changes.</td></tr></table></div></div></div></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="1fpm0h7">
+		import { set_public_env, start } from "/_app/immutable/start-43f35d63.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1fpm0h7"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 10],
+				params: {},
+				routeId: "docs/customAnimators.html"
+			}
+		});
+	</script></div>
+	</body>
+</html>

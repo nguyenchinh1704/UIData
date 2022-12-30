@@ -6,8 +6,10 @@ public class Player : Entity
 {
 	private Animator animator;
 	private	SpriteRenderer	spriteRenderer;
-	[SerializeField]GameObject panelMinus;
+	[SerializeField]GameObject panelMinusTree;
+	[SerializeField] GameObject panelMinusStone;
 	[SerializeField]GameObject Tree;
+	[SerializeField] GameObject Stone;
 
 	private void Awake()
 	{
@@ -22,14 +24,20 @@ public class Player : Entity
 		
 		
 	}
-	public void Minus()
+	public void MinusTree()
     {
 		MP -= 50;
-		panelMinus.SetActive(false);
+		panelMinusTree.SetActive(false);
 		Tree.SetActive(false);
 		animator.SetTrigger("isCut");
 		
     }
+	public void MinusStone()
+    {
+		MP -= 30;
+		panelMinusStone.SetActive(false);
+		Stone.SetActive(false);
+	}
 
     /*private void OnCollisionEnter(Collision collision)
     {
@@ -66,7 +74,7 @@ public class Player : Entity
 
         yield return new WaitForSeconds(0.0515f);
 
-        color.a = 1;
+        color.a = 0.5f;
         spriteRenderer.color = color;
     }
 }
