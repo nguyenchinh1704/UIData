@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../\/static\/favicon.svg" />
+		<link rel="icon" href="../\/static\/favicon.png" />
+		<!-- <meta name="viewport" content="width=device-width" /> -->
+		<meta http-equiv="content-security-policy" content=""><title>Flexalon Docs: Curve Layout</title>
+	<link href="../_app/immutable/assets/__layout-76928bbf.css" rel="stylesheet">
+	<link href="../_app/immutable/assets/docsPage-367d98a5.css" rel="stylesheet">
+	<link rel="modulepreload" href="/_app/immutable/start-43f35d63.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-9a223789.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-44a9624e.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/docs/curveLayout.svelte-719f196f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/docsPage-127bdabf.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/page-76fa0ce5.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<div class="inline-flex items-center bg-black flex-col w-full min-h-screen"><div class="flex w-full justify-center items-start fixed bg-black z-10 p-4 pr-10 pl-8 shadow-lg shadow-[#21a6f088]"><div class="flex w-full max-w-[1600px] justify-between items-center"><a href="/"><img src="../\/static\/flexalon-logo.png" width="200px" alt="Logo"></a>
+            <div class="inline-flex gap-10 items-center"><a class="text-white text-lg font-bold" href="https://www.flexalon.com">Website</a></div></div></div>
+
+    <div class="mt-32 w-full h-4/5 flex flex-col items-center"><div class="pl-10"><div class="flex w-full max-w-[1600px] min-h-full text-zinc-400 relative"><div class="flex flex-col w-[300px] pt-10 gap-2 border-[#21a6f0] border-r-2 min-h-full fixed"><b class="text-zinc-200">Getting Started</b>
+                <a href="../docs.html" class="svelte-thsdwb">Installation</a>
+                <a href="../docs/coreConcepts.html" class="svelte-thsdwb">Core Concepts</a>
+                <a href="../docs/challenges.html" class="svelte-thsdwb">Challenges!</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/flexalonObject.html">Flexalon Objects</a>
+                <a href="../docs/flexalonObject.html#size" class="svelte-thsdwb">Width, Height, and Depth</a>
+                <a href="../docs/flexalonObject.html#offset" class="svelte-thsdwb">Offset, Scale, and Rotation</a>
+                <a href="../docs/flexalonObject.html#margins" class="svelte-thsdwb">Margins and Padding</a>
+
+                <b class="text-zinc-200 mt-5">Layouts</b>
+                <a href="../docs/flexibleLayout.html" class="svelte-thsdwb">Flexible Layout</a>
+                <a href="../docs/gridLayout.html" class="svelte-thsdwb">Grid Layout</a>
+                <a href="../docs/circleLayout.html" class="svelte-thsdwb">Circle / Spiral Layout</a>
+                <a href="../docs/curveLayout.html" class="svelte-thsdwb">Curve Layout</a>
+                <a href="../docs/randomLayout.html" class="svelte-thsdwb">Random Layout</a>
+                <a href="../docs/constraints.html" class="svelte-thsdwb">Constraints</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/animators.html">Animators</a>
+                <a href="../docs/animators.html#curve" class="svelte-thsdwb">Curve Animator</a>
+                <a href="../docs/animators.html#lerp" class="svelte-thsdwb">Lerp Animator</a>
+                <a href="../docs/animators.html#rb" class="svelte-thsdwb">Rigid Body Animator</a>
+                <a href="../docs/animators.html#layouts" class="svelte-thsdwb">Animating Layouts</a>
+
+                <b class="text-zinc-200 mt-5">Data Binding</b>
+                <a href="../docs/cloner.html" class="svelte-thsdwb">Cloner</a>
+                <a href="../docs/cloner.html#databinding" class="svelte-thsdwb">Data Binding</a>
+
+                <b class="text-zinc-200 mt-5">API</b>
+                <a href="../docs/pipeline.html" class="svelte-thsdwb">Flexalon Pipeline</a>
+                <a href="../docs/customLayout.html" class="svelte-thsdwb">Custom Layouts</a>
+                <a href="../docs/customAnimators.html" class="svelte-thsdwb">Custom Animators</a>
+                <a href="../docs/adapters.html" class="svelte-thsdwb">Adapters</a></div>
+            <div class="flex flex-col w-full p-10 ml-[300px]"><div class="text-white text-2xl mb-10">Curve Layout</div>
+                <div class="doc svelte-thsdwb"><p>Use a curve layout to position children along a bézier curve.</p>
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-curve.png" alt="Curve layout"></div>
+
+    <p class="text-xl mt-10">Editing the Curve</p>
+
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-curve-editor.png" alt="Curve layout in editor"></div>
+
+    <p>The curve layout initially has 3 points positioned along the X axis. You can add more points by adding items to the &quot;Points&quot; property in the inspector.
+        Each point has handles to move the position and tangent line. Drag these handles in the editor to define the shape of your curve.
+    </p>
+    <p>To reduce visual clutter, you can lock the positions or tangents by checking the corresponding property.
+        This will hide the associated handles in the editor.
+    </p>
+
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-curve-options.png" alt="Curve layout options"></div>
+
+    <table><tr><td>Lock Tangents</td>
+            <td>Prevents the tangent handles from appearing in the editor.</td></tr>
+        <tr><td>Lock Positions</td>
+            <td>Prevents the tangent handles from appearing in the editor.</td></tr>
+        <tr><td>Points</td>
+            <td>Defines the positions and tangents of the points that define the curve.
+                The tangent line is defined as an offset from the point, and so setting
+                the tangent line to 0, 0, 0 will create no tangent, resulting in a corner instead of a curve.
+            </td></tr>
+        <tr><td>Spacing Type</td>
+            <td>If set to Evenly, the children are positioned evenly along the curve. If set to Fixed, you can specify the spacing.
+            </td></tr>
+        <tr><td>Spacing</td>
+            <td>The fixed spacing between objects on the curve.</td></tr>
+        <tr><td>Start At</td>
+            <td>Offsets all objects along the curve.
+            </td></tr>
+        <tr><td>Rotation</td>
+            <td>Determines how children should be rotated - None, Forward along the curve, or Backwards along the curve.</td></tr></table></div></div></div></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="hs4dxt">
+		import { set_public_env, start } from "/_app/immutable/start-43f35d63.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="hs4dxt"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 9],
+				params: {},
+				routeId: "docs/curveLayout.html"
+			}
+		});
+	</script></div>
+	</body>
+</html>

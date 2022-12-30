@@ -6,6 +6,12 @@ public class Mission : MonoBehaviour
 {
     [SerializeField] GameObject btMission;
     [SerializeField] GameObject pnMission;
+    [SerializeField] GameObject pnMission1;
+    [SerializeField] GameObject pnMission2;
+    [SerializeField] GameObject pnMission3;
+    [SerializeField] GameObject pnMission4;
+    [SerializeField] GameObject btClose;
+
     bool Activate;
     public float sec = 3f;
 
@@ -22,21 +28,26 @@ public class Mission : MonoBehaviour
     public void OpenAndClose()
     {
 
-        if (Activate == false)
-        {
+       /* if (Activate == false)
+        {*/
+            /*Activate = false;*/
             pnMission.transform.gameObject.SetActive(true);
-            Activate = true;
+            pnMission1.SetActive(false);
+            pnMission2.SetActive(false);
+            pnMission3.SetActive(false);
+            pnMission4.SetActive(false);
             StartCoroutine(AutoOff());
-        }
-        else
+       /* }*/
+        /*else
         {
-            pnMission.transform.gameObject.SetActive(false);
             Activate = false;
-        }
+            pnMission.transform.gameObject.SetActive(false);
+        }*/
     }
     IEnumerator AutoOff()
     {
         yield return new WaitForSeconds(sec);
         pnMission.SetActive(false);
+        btClose.SetActive(false);
     }
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../\/static\/favicon.svg" />
+		<link rel="icon" href="../\/static\/favicon.png" />
+		<!-- <meta name="viewport" content="width=device-width" /> -->
+		<meta http-equiv="content-security-policy" content=""><title>Flexalon Docs: Circle / Sprial Layout</title>
+	<link href="../_app/immutable/assets/__layout-76928bbf.css" rel="stylesheet">
+	<link href="../_app/immutable/assets/docsPage-367d98a5.css" rel="stylesheet">
+	<link rel="modulepreload" href="/_app/immutable/start-43f35d63.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-9a223789.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-44a9624e.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/docs/circleLayout.svelte-5ef989a9.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/docsPage-127bdabf.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/page-76fa0ce5.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<div class="inline-flex items-center bg-black flex-col w-full min-h-screen"><div class="flex w-full justify-center items-start fixed bg-black z-10 p-4 pr-10 pl-8 shadow-lg shadow-[#21a6f088]"><div class="flex w-full max-w-[1600px] justify-between items-center"><a href="/"><img src="../\/static\/flexalon-logo.png" width="200px" alt="Logo"></a>
+            <div class="inline-flex gap-10 items-center"><a class="text-white text-lg font-bold" href="https://www.flexalon.com">Website</a></div></div></div>
+
+    <div class="mt-32 w-full h-4/5 flex flex-col items-center"><div class="pl-10"><div class="flex w-full max-w-[1600px] min-h-full text-zinc-400 relative"><div class="flex flex-col w-[300px] pt-10 gap-2 border-[#21a6f0] border-r-2 min-h-full fixed"><b class="text-zinc-200">Getting Started</b>
+                <a href="../docs.html" class="svelte-thsdwb">Installation</a>
+                <a href="../docs/coreConcepts.html" class="svelte-thsdwb">Core Concepts</a>
+                <a href="../docs/challenges.html" class="svelte-thsdwb">Challenges!</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/flexalonObject.html">Flexalon Objects</a>
+                <a href="../docs/flexalonObject.html#size" class="svelte-thsdwb">Width, Height, and Depth</a>
+                <a href="../docs/flexalonObject.html#offset" class="svelte-thsdwb">Offset, Scale, and Rotation</a>
+                <a href="../docs/flexalonObject.html#margins" class="svelte-thsdwb">Margins and Padding</a>
+
+                <b class="text-zinc-200 mt-5">Layouts</b>
+                <a href="../docs/flexibleLayout.html" class="svelte-thsdwb">Flexible Layout</a>
+                <a href="../docs/gridLayout.html" class="svelte-thsdwb">Grid Layout</a>
+                <a href="../docs/circleLayout.html" class="svelte-thsdwb">Circle / Spiral Layout</a>
+                <a href="../docs/curveLayout.html" class="svelte-thsdwb">Curve Layout</a>
+                <a href="../docs/randomLayout.html" class="svelte-thsdwb">Random Layout</a>
+                <a href="../docs/constraints.html" class="svelte-thsdwb">Constraints</a>
+
+                <a class="text-zinc-200 mt-5 font-bold svelte-thsdwb" href="../docs/animators.html">Animators</a>
+                <a href="../docs/animators.html#curve" class="svelte-thsdwb">Curve Animator</a>
+                <a href="../docs/animators.html#lerp" class="svelte-thsdwb">Lerp Animator</a>
+                <a href="../docs/animators.html#rb" class="svelte-thsdwb">Rigid Body Animator</a>
+                <a href="../docs/animators.html#layouts" class="svelte-thsdwb">Animating Layouts</a>
+
+                <b class="text-zinc-200 mt-5">Data Binding</b>
+                <a href="../docs/cloner.html" class="svelte-thsdwb">Cloner</a>
+                <a href="../docs/cloner.html#databinding" class="svelte-thsdwb">Data Binding</a>
+
+                <b class="text-zinc-200 mt-5">API</b>
+                <a href="../docs/pipeline.html" class="svelte-thsdwb">Flexalon Pipeline</a>
+                <a href="../docs/customLayout.html" class="svelte-thsdwb">Custom Layouts</a>
+                <a href="../docs/customAnimators.html" class="svelte-thsdwb">Custom Animators</a>
+                <a href="../docs/adapters.html" class="svelte-thsdwb">Adapters</a></div>
+            <div class="flex flex-col w-full p-10 ml-[300px]"><div class="text-white text-2xl mb-10">Circle / Sprial Layout</div>
+                <div class="doc svelte-thsdwb"><p>Use a circle layout to position children along a circle or spiral.</p>
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-circle.png" alt="Circle layout"></div>
+
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-spiral.png" alt="Circle layout"></div>
+
+    <p class="text-xl mt-10">Circle Layout Options</p>
+    <div class="flex ml-10 m-5 mb-10"><img src="../\/static\/doc-circle-options.png" alt="Circle layout options"></div>
+    <table><tr><td>Radius</td>
+            <td>Radius of the circle.</td></tr>
+        <tr><td>Use Width</td>
+            <td>Instead of specifying the radius, this option will match the radius to half of the width determined by the Flexalon Object Component.
+                This can be useful if the size of the circle should be determined by another layout or constraint.
+            </td></tr>
+        <tr><td>Spiral</td>
+            <td>If checked, positions each object at increasing heights to form a spiral.</td></tr>
+        <tr><td>Spiral Spacing</td>
+            <td>Vertical spacing between objects in the spiral.</td></tr>
+        <tr><td>Spacing Type</td>
+            <td>If set to Evenly, the space around the circle is distributed between children.
+                If set to Fixed, the Spacing Degrees property determines the space between children.</td></tr>
+        <tr><td>Start At Degrees</td>
+            <td>By default, the first child will be placed at (radius, 0, 0). Start At Degrees value will add an offset all children around the circle.</td></tr>
+        <tr><td>Rotate</td>
+            <td>Determines how children should be rotated - None, In to the circle, Out of the circle, Forward along the circle, or Backwards along the circle.</td></tr>
+        <tr><td>Vertical Align</td>
+            <td>Vertically aligns the layout with the height set by the Flexalon Object Component.
+                For a circle, this will align each individual object in the layout.
+                For a spiral, this will align the entire spiral.
+            </td></tr></table></div></div></div></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="wabu42">
+		import { set_public_env, start } from "/_app/immutable/start-43f35d63.js";
+
+		set_public_env({});
+
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="wabu42"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 5],
+				params: {},
+				routeId: "docs/circleLayout.html"
+			}
+		});
+	</script></div>
+	</body>
+</html>

@@ -9,6 +9,10 @@ public class MoveCharacter: MonoBehaviour
     [SerializeField]private Joystick joystick;
     [SerializeField]private float speed;
     [SerializeField] GameObject panelMP;
+    [SerializeField] GameObject panelMP1;
+    [SerializeField] GameObject pnOpen;
+    [SerializeField] GameObject pnCultivation;
+    [SerializeField] GameObject clock;
 
     public static MoveCharacter instance;
     private void OnEnable()
@@ -61,6 +65,31 @@ public class MoveCharacter: MonoBehaviour
         else
         {
             panelMP.SetActive(false);
+        }
+        if(collision.gameObject.tag == "Stone")
+        {
+            panelMP1.SetActive(true);
+        }
+        else
+        {
+            panelMP1.SetActive(false);
+        }
+        if(collision.gameObject.tag == "Soil")
+        {
+            pnOpen.SetActive(true);
+        }
+        else
+        {
+            pnOpen.SetActive(false);
+        }
+        if(collision.gameObject.tag == "Cultivation Min")
+        {
+            clock.SetActive(true);
+            pnOpen.SetActive(false);
+        }
+        else
+        {
+            clock.SetActive(false);
         }
     }
 }
